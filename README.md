@@ -1,6 +1,6 @@
 # Gitpod Backstage Demo
 
-This repository contains a demo of a Backstage instance that includes the Gitpod Backstage plugin. The Gitpod plugin allows users to easily launch a workspace directly from Backstage.
+This repository contains a demo of a Backstage instance that includes the Gitpod Backstage plugin. The Gitpod plugin allows users to easily launch a workspace directly from Backstage. To get started with the plugin, [head over to the plugin repository](https://github.com/gitpod-samples/gitpod-backstage-plugin). 
 
 ## Getting Started
 
