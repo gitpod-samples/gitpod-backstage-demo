@@ -26,13 +26,13 @@ backend:
     client: better-sqlite3
     connection: ':memory:'
 
-integrations:
-  github:
-    - host: github.com
-      token: $GH_PW
-  gitlab:
-    - host: gitlab.com
-      token: $GL_PW
+# integrations:
+#   github:
+#     - host: github.com
+#       token: $GH_PW
+#   gitlab:
+#     - host: gitlab.com
+#       token: $GL_PW
 
 techdocs:
   builder: 'local' # Alternatives - 'external'
@@ -46,8 +46,11 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Component, API, System, Domain, Resource, Location, User, Group]
   locations:
+    - type: url
+      target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
+
     - type: file
       target: ../../examples/entities.yaml
 
@@ -60,11 +63,10 @@ catalog:
       target: ../../examples/org.yaml
       rules:
         - allow: [User, Group]
-
-auth:
-  environment: development
-  providers:
-    github:
-      development:
-        clientId: $GH_CLIENT
-        clientSecret: $GH_SECRET
+# auth:
+#   environment: development
+#   providers:
+#     github:
+#       development:
+#         clientId: $GH_CLIENT
+#         clientSecret: $GH_SECRET
