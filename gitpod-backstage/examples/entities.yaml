@@ -3,22 +3,29 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: examples
+  name: cdn
 spec:
-  owner: team-a
+  owner: team-kumquat
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Website
+  name: website
+  links:
+    - url: https://gitpod.io/new/?editor=intellij&workspaceClass=g1-large#https://github.com/gitpod-io/website
+      title: Open in Gitpod (IntelliJ - Large)
+      icon: dashboard
+    - url: https://gitpod.io/new/?editor=xterm#https://github.com/gitpod-io/website
+      title: Open in Gitpod (Terminal Browser)
+      icon: LibraryBooks
   annotations:
     github.com/project-slug: "gitpod-io/website"
 spec:
   type: website
   lifecycle: experimental
-  owner: team-a
-  system: examples
+  owner: team-kumquat
+  system: cdn
   providesApis: [example-grpc-api]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
@@ -29,8 +36,8 @@ metadata:
 spec:
   type: grpc
   lifecycle: experimental
-  owner: team-a
-  system: examples
+  owner: team-kumquat
+  system: cdn
   definition: |
     syntax = "proto3";
 

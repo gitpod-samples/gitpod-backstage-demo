@@ -19,7 +19,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-a
+  name: team-kumquat
   links:
     - url: https://gitpod.io/workspaces
       title: Gitpod Dashboard
@@ -35,7 +35,7 @@ metadata:
   name: lou
 spec:
   type: member
-  memberOf: [team-a]
+  memberOf: [team-kumquat]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -43,12 +43,12 @@ metadata:
   name: pauline
 spec:
   type: member
-  memberOf: [team-a]
+  memberOf: [team-kumquat]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-b
+  name: team-grapefruits
 spec:
   type: team
   children: []
@@ -56,7 +56,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-c
+  name: team-playback
 spec:
   type: team
   children: []
@@ -64,7 +64,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: team-d
+  name: team-media
 spec:
   type: team
   children: []

@@ -5,5 +5,5 @@ metadata:
   description: Stores artist details
 spec:
   type: database
-  owner: team-a
+  owner: team-kumquat
   system: artist-engagement-portal

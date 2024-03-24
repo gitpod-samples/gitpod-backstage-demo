@@ -14,7 +14,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: team-c
+  owner: team-playback
   providesApis:
     - petstore
     - streetlights

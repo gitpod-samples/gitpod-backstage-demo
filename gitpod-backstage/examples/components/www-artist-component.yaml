@@ -6,6 +6,6 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: team-a
+  owner: team-kumquat
   system: artist-engagement-portal
-  consumesApis: ['component:artist-lookup']
+  consumesApis: ["component:artist-lookup"]

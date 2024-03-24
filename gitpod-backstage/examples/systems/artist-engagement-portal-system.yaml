@@ -6,5 +6,5 @@ metadata:
   tags:
     - portal
 spec:
-  owner: team-a
+  owner: team-kumquat
   domain: artists

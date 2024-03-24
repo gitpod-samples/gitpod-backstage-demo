@@ -6,5 +6,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: team-d
+  owner: team-media
   subcomponentOf: wayback-archive

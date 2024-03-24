@@ -6,6 +6,6 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: team-a
+  owner: team-kumquat
   providesApis:
     - wayback-archive

@@ -9,5 +9,5 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: team-b
+  owner: team-grapefruits
   system: podcast
