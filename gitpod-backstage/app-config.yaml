@@ -3,7 +3,7 @@ app:
   baseUrl: http://localhost:3000
 
 gitpod:
-  baseUrl: 'https://gitpod.io/'
+  baseUrl: "https://gitpod.io/"
 
 organization:
   name: Gitpod Demo
@@ -12,61 +12,81 @@ backend:
   baseUrl: http://localhost:7007
   listen:
     port: 7007
-
-
   csp:
-    connect-src: ["'self'", 'http:', 'https:']
- 
+    connect-src: ["'self'", "http:", "https:"]
   cors:
     origin: http://localhost:3000
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
-
   database:
     client: better-sqlite3
-    connection: ':memory:'
-
-# integrations:
-#   github:
-#     - host: github.com
-#       token: $GH_PW
-#   gitlab:
-#     - host: gitlab.com
-#       token: $GL_PW
+    connection: ":memory:"
 
 techdocs:
-  builder: 'local' # Alternatives - 'external'
+  builder: "local" # Alternatives - 'external'
   generator:
-    runIn: 'docker' # Alternatives - 'local'
+    runIn: "docker" # Alternatives - 'local'
   publisher:
-    type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+    type: "local" # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
 catalog:
+  processingInterval: { seconds: 5 }
   import:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, API, System, Domain, Resource, Location, User, Group]
+    - allow:
+        [
+          Component,
+          API,
+          System,
+          Domain,
+          Resource,
+          Location,
+          User,
+          Group,
+          Template,
+        ]
   locations:
-    - type: url
-      target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
-
+    - type: file
+      target: ../../examples/components/petstore-component.yaml
+    - type: file
+      target: ../../examples/components/playback-order-component.yaml
+    - type: file
+      target: ../../examples/components/podcast-api-component.yaml
+    - type: file
+      target: ../../examples/components/queue-proxy-component.yaml
+    - type: file
+      target: ../../examples/components/searcher-component.yaml
+    - type: file
+      target: ../../examples/components/playback-lib-component.yaml
+    - type: file
+      target: ../../examples/components/www-artist-component.yaml
+    - type: file
+      target: ../../examples/components/shuffle-api-component.yaml
+    - type: file
+      target: ../../examples/components/wayback-archive-component.yaml
+    - type: file
+      target: ../../examples/components/wayback-archive-ingestion-component.yaml
+    - type: file
+      target: ../../examples/components/wayback-archive-storage-component.yaml
+    - type: file
+      target: ../../examples/components/wayback-search-component.yaml
+    - type: file
+      target: ../../examples/domains/artists-domain.yaml
+    - type: file
+      target: ../../examples/domains/playback-domain.yaml
+    - type: file
+      target: ../../examples/resources/artists-db-resource.yaml
+    - type: file
+      target: ../../examples/systems/artist-engagement-portal-system.yaml
+    - type: file
+      target: ../../examples/systems/audio-playback-system.yaml
+    - type: file
+      target: ../../examples/systems/podcast-system.yaml
     - type: file
       target: ../../examples/entities.yaml
-
     - type: file
       target: ../../examples/template/template.yaml
-      rules:
-        - allow: [Template]
-
     - type: file
       target: ../../examples/org.yaml
-      rules:
-        - allow: [User, Group]
-# auth:
-#   environment: development
-#   providers:
-#     github:
-#       development:
-#         clientId: $GH_CLIENT
-#         clientSecret: $GH_SECRET

@@ -20,9 +20,30 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: team-a
+  links:
+    - url: https://gitpod.io/workspaces
+      title: Gitpod Dashboard
+      icon: dashboard
 spec:
   type: team
   children: []
+  members: [lou, pauline]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: lou
+spec:
+  type: member
+  memberOf: [team-a]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: pauline
+spec:
+  type: member
+  memberOf: [team-a]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
