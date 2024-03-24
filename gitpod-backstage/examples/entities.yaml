@@ -1,5 +1,4 @@
 ---
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
@@ -7,7 +6,6 @@ metadata:
 spec:
   owner: team-kumquat
 ---
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -28,7 +26,18 @@ spec:
   system: cdn
   providesApis: [example-grpc-api]
 ---
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: website-backend
+  annotations:
+    github.com/project-slug: "gitpod-samples/template-docker-compose"
+spec:
+  type: website
+  lifecycle: experimental
+  owner: team-kumquat
+  system: cdn
+---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
