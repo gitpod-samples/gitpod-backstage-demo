@@ -12,7 +12,7 @@ metadata:
       title: GitHub Repo
       icon: github
   annotations:
-    github.com/project-slug: swagger-api/swagger-petstore
+    repo-url: https://github.com/swagger-api/swagger-petstore
 spec:
   type: service
   lifecycle: experimental
