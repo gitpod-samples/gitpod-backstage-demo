@@ -33,7 +33,7 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
-import { Gitpod } from '@gitpod-io/backstage-plugin-gitpod';
+import { GitpodButton } from '@gitpod/backstage-plugin-gitpod';
 // import { githubAuthApiRef } from '@backstage/core-plugin-api';
 // import { SignInPage } from '@backstage/core-components';
 
@@ -110,7 +110,7 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
-    <Route path="/gitpod" element={<Gitpod/>} />
+    <Route path="/gitpod" element={<GitpodButton/>} />
   </FlatRoutes>
 );
 
